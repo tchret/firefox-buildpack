@@ -2,7 +2,7 @@
 
 # The MIT License (MIT)
 #
-# Copyright (c) 2019 Yegor Bugayenko
+# Copyright (c) 2019 Yegor Bugayenko & tchret
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -28,11 +28,12 @@ set -x
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-ARCHIVE=firefox-68.0.2.tar.bz2
+
+ARCHIVE=firefox-61.0.tar.bz2
 mkdir -p $CACHE_DIR
 cd $CACHE_DIR
 if ! [ -e "${ARCHIVE}" ]; then
-  wget "http://ftp.mozilla.org/pub/firefox/releases/68.0.2/linux-$(uname -m)/en-US/${ARCHIVE}"
+  wget "http://ftp.mozilla.org/pub/firefox/releases/61.0/linux-$(uname -m)/en-US/${ARCHIVE}"
   tar -xjf "${ARCHIVE}"
 fi
 mkdir -p $BUILD_DIR/vendor
