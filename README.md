@@ -7,7 +7,7 @@ with Firefox 68.0.2.
 To install it, from the command line:
 
 ```bash
-$ heroku buildpacks:add http://github.com/yegor256/firefox-buildpack
+$ heroku buildpacks:add http://github.com/tchret/firefox-buildpack
 ```
 
 You may also need [buitron/geckodriver-buildpack](http://github.com/buitron/geckodriver-buildpack)
